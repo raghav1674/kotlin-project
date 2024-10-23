@@ -1,0 +1,13 @@
+
+mkdir ~/kotlin-2.0.21
+cd ~/kotlin-2.0.21
+
+wget https://github.com/JetBrains/kotlin/releases/download/v2.0.21/kotlin-compiler-2.0.21.zip
+unzip kotlin-compiler-2.0.21.zip
+
+export PATH=~/kotlin-2.0.21/kotlinc/bin:$PATH
+
+
+kotlinc -d out src/com/project/ConsoleUtils.kt src/com/project/Main.kt src/com/project/Question.kt src/com/project/QuestionBank.kt src/com/project/QuestionBankState.kt src/com/project/Utils.kt   -cp ../libs/khoury.jar
+
+kotlin -cp out -cp ../libs/khoury.jar com.example.MainKt
